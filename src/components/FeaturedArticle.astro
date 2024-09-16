@@ -1,17 +1,21 @@
-<div class="featured-article-container">
-<h2 class="visually-hidden">Featured article</h2>
-<article>
-    <img src="/images/image-web-3-desktop.jpg" alt="Featured Article" />
-    <h3>The Bright Future of Web 3.0?</h3>
-    <div class="flow">
-        <p> We dive into the next evolution of the web that claims to put the
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={[className, "featured-article-container"] }
+    <h2 class="visually-hidden">Featured article</h2>
+    <article>
+        <img src="/images/image-web-3-desktop.jpg" alt="Featured Article" />
+        <h3>The Bright Future of Web 3.0?</h3>
+        <div class="flow">
+            <p> We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is
             it really fulfilling its promise?</p>
-        <a href="#" class="button">
+            <a href="#" class="button">
             Read More <span class="visually-hidden"
             >about The Bright Future of Web 3.0</span
             >
-    </a>
+        </a>
     </div>
 </article>
 </div>
