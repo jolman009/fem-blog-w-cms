@@ -2,7 +2,7 @@
 const { class: className } = Astro.props;
 ---
 
-<div class:list={[className, "featured-article-container"] }
+<div class:list={[className, "featured-article-container"]}> 
     <h2 class="visually-hidden">Featured article</h2>
     <article>
         <img src="/images/image-web-3-desktop.jpg" alt="Featured Article" />
@@ -18,7 +18,7 @@ const { class: className } = Astro.props;
         </a>
     </div>
 </article>
-</div>
+</h2>
 
 <style>
     .featured-article-container {
@@ -27,8 +27,8 @@ const { class: className } = Astro.props;
     article {
         display: grid;
         gap: 1rem;
-        @container (width > 600px) {
-            gap: 2rem;
+        @container (width > calc(25ch * 2))  {
+            gap: 2rem 1rem;
             grid-template-columns: repeat(2, 1fr);
         }
     }   

@@ -1,17 +1,40 @@
 ---
 import PrimaryLayout from '../layouts/PrimaryLayout.astro'	
-import FeaturedArticle from '../components/FeaturedArticle.astro'		
-	
+import FeaturedArticle from '../components/FeaturedArticle.astro'	
+import PopularArticles from '../components/PopularArticles.astro'	
+
 ---
 
 <PrimaryLayout>
-	<div class="three-columns">
+	<div class="three-columns section">
 		<FeaturedArticle class="span-2"/>	
-		<div class="inverted">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugit quod aspernatur provident reiciendis nostrum quisquam quam natus explicabo nemo cum repudiandae enim a excepturi ad quae. Placeat, explicabo asperiores!</p>	
-		</div>
-	</div>
-	<!-- Header -->
-	<!-- three-column layout -->
-	<!-- three-column layout -->
+		<div class="inverted flow">
+		<h2 class="accent-color">New</h2>
+		<ul role="list" class="separated-list">
+			<li>
+				<article >
+					<h3><a href="#">Article 1</a></h3>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quam harum nobis est fuga facilis maiores.</p>
+				</article>
+			</li>
+			<li>
+				<article >
+					<h3><a href="#">Article 2</a></h3>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quam harum nobis est fuga facilis maiores illum! Assumenda.</p>
+				</article>
+			</li>
+			<li>
+				<article class="flow">
+					<h3><a href="#">Article 3</a></h3>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quam harum nobis est fuga facilis maiores.</p>
+				</article>
+			</li>
+</div>
+</div>		
+
+		
+
+		 <PopularArticles class="three-columns section"/>
+	
+
 </PrimaryLayout>
