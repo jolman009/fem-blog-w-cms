@@ -45,6 +45,24 @@
             color: var(--clr-accent-400);    
         }
     }   
-    
+    @media (width < 750px) {
+        nav {
+            display: none;
+        }
+    }
 
+    .skip-to-main {
+        position: absolute;
+        
+        font-weight: var(--fw-bold);
+        padding: 1em 3em;
+        translate:-200%;
+
+        &:hover,
+        &:focus-visible {
+            background: var(--clr-accent-400);
+            color: var(--clr-neutral-100);
+            translate:0;
+        }
+    }
 </style>
