@@ -131,6 +131,7 @@ header, footer {
 
 .accent-color {
     color: var(--clr-accent-400);
+    font-size: var(--fs-700);
 }
 
 .heading-color {
