@@ -16,7 +16,7 @@ const { class: className } = Astro.props;
     <li>
         <article>
             <img src="/images/image-retro-pcs.jpg">
-            <div>
+            <div class="flow">
              <h3><a href="#">Reviving Retro PCs</a></h3>
                 <p>What happens when old PCs are given modern upgrades?</p>
             </div>
@@ -26,14 +26,12 @@ const { class: className } = Astro.props;
     <li>
         <article>
             <img src="/images/image-retro-pcs.jpg">
-            <div>
+            <div class="flow">
              <h3><a href="#">Reviving Retro PCs</a></h3>
                 <p>What happens when old PCs are given modern upgrades?</p>
             </div>
         </article>
     </li>
-   
-
 </ul>
 
 <style>
@@ -41,6 +39,21 @@ const { class: className } = Astro.props;
         display: grid;
         gap: 1rem;
         grid-template-columns: 100px auto;
+
+        > div {
+            display: grid;
+            gap: .5rem;
+
+        &::before {
+        content: counter(article-count, decimal-leading-zero);
+        display:block;
+        font-weight: var(--fw-semi-bold);
+        font-size: var(--fs-700);
+        color: var(--clr-accent-400);
+
+    }
+
+        }
     }
 
     ul {
@@ -51,13 +64,5 @@ const { class: className } = Astro.props;
         counter-increment: article-count;
     }
 
-    h3::before {
-        content: counter(article-count, decimal-leading-zero);
-        display:block;
-        font-weight: var(--fw-semi-bold);
-        font-size: var(--fs-700);
-        color: var(--clr-accent-400);
-
-    }
 
 </style>

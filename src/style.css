@@ -43,9 +43,19 @@ h1, h2, h3, h4, p {
 h1, h2, h3, h4 {
     line-height: 1.1;
     font-weight: var(--fw-extrabold);
-    color: var(--Very-dark-blue);   
+    color: var(--clr-heading);   
     text-wrap: balance;
-}   
+} 
+
+:where(h1, h2, h3, h4) > a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--clr-accent-400);
+    }
+}
 
 
 p, li {
@@ -155,7 +165,7 @@ p {
         display: block;
         width: 100%;
         height: 1px;
-        background: hsl(from var(--clr-body) h s l / .4);
+        background: hsl(from var(--clr-body) h s l / .44);
         margin-block: 1.5rem;
     }
 
