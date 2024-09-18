@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@sentry/astro": "^8.30.0",
+    "@spotlightjs/astro": "^2.1.9",
     "astro": "^4.15.5",
     "prismjs": "^1.29.0"
   },
