@@ -149,15 +149,10 @@ header, footer {
     background-color: var(--clr-orange-400); 
 }
 
-a {
-    font-size: 26px;
-}
-
-
 
 p {
     color: var(--clr-body);
-    font-size: 24px;
+    font-size: 22x;
 }
 
 .flow > * + * {
