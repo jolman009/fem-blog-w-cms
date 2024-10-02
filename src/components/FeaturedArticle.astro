@@ -5,11 +5,13 @@ const { class: className } = Astro.props;
 <div class:list={[className, "featured-article-container"]}> 
     <h2 class="visually-hidden">Featured article</h2>
     <article>
-        <img src="/images/featured-candle003.jpg" alt="Featured Article" />
-        <h3>Groovy Candles</h3>
+        <img src="/images/image-web-3-desktop.jpg" alt="Featured Article" />
+        <h3>The Bright Future of Web 3.0?</h3>
         <div class="flow">
-            <p> Buy candles from me.</p>
-            <a href="https://www.temporary-url.com/3A02D1" class="button">
+            <p> We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is
+            it really fulfilling its promise?</p>
+            <a href="#" class="button">
             Read More <span class="visually-hidden"
             >about The Bright Future of Web 3.0</span
             >
@@ -21,7 +23,6 @@ const { class: className } = Astro.props;
 <style>
     .featured-article-container {
         container-type: inline-size;
-        font-family: 'Chicle', serif;
     }
     article {
         display: grid;
@@ -34,16 +35,11 @@ const { class: className } = Astro.props;
 
     img {
         grid-column: 1 / -1;
-        height: 450px;
-        width: 750px;
     }
 
     h3 {
-        font-size: 72px;
+        font-size: var(--fs-900);
     }
-
-    
 
 
 </style>
-

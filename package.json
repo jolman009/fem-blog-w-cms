@@ -10,15 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@sentry/astro": "^8.30.0",
-    "@spotlightjs/astro": "^2.1.9",
     "astro": "^4.15.5",
-    "preact": "^10.24.1",
     "prismjs": "^1.29.0"
   },
   "devDependencies": {
-    "@astrojs/preact": "^3.5.3",
-    "@astrojs/tailwind": "^5.1.1",
     "cypress": "^13.14.2",
     "sass": "^1.78.0"
   }
