@@ -10,6 +10,9 @@ const { title = "Fem Blog with CMS" } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body class="base-layout">
@@ -18,4 +21,25 @@ const { title = "Fem Blog with CMS" } = Astro.props
 			<slot />
 		</main>
 	</body>
+	
 </html>
+
+<script is:inline>
+	const theme = (() => {
+	  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+	  }
+	  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		return "dark";
+	  }
+	  return "light";
+	})();
+  
+	if (theme === "light") {
+	  document.documentElement.classList.remove("dark");
+	} else {
+	  document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+  </script>
+
