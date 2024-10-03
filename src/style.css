@@ -157,10 +157,10 @@ p {
     margin-block-start: var(--flow-space, 1em);
 }
 
-
 .section { 
       margin-block-end: 3rem;
 }
+
 .separated-list {
     /* add a separator between all items */
     & > * + *::before {
